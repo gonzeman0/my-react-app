@@ -23,8 +23,10 @@ body {
   background: rgb(18, 19, 61);
 }
 
-#Board {
-
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, fr);
 }
 
 .square {
