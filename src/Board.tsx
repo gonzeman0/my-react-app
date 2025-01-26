@@ -1,13 +1,3 @@
-function Board(): React.ReactNode {
-    return (
-        <div id="board">
-            <Square state={SquareState.Player2} onClick={function (): void {
-                throw new Error('Function not implemented.')
-            } }/>
-        </div>
-    )
-}
-
 enum SquareState {
     Default = "default",
     Disabled = "disabled",
@@ -15,12 +5,25 @@ enum SquareState {
     Player2 = "player2"
 }
 
-type props = {
+type SquareProps = {
     state: SquareState;
     onClick: () => void;
 }
 
-function Square({ state, onClick }: props): React.ReactNode {
+function Board(): React.ReactNode {
+    function onClick() {
+        throw new Error('Function not implemented.')
+    }
+
+    return (
+        <div id="board">
+            <Square state={SquareState.Player2} onClick={onClick}/>
+        </div>
+    )
+}
+
+
+function Square({ state, onClick }: SquareProps): React.ReactNode {
     function renderState(state: SquareState): string {
         switch (state) {
             case SquareState.Default:
@@ -35,7 +38,7 @@ function Square({ state, onClick }: props): React.ReactNode {
 
     return (
         <button className="square" onClick={onClick}>
-            {renderState(state)}
+            <span>{renderState(state)}</span>
         </button>
     )
 }
