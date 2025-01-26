@@ -2,8 +2,17 @@ import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello, World!</h1>
+    <div id="App">
+      <h1 id="title" className="glow">Tic Tac Toe</h1>
+      <Board/>
+    </div>
+  )
+}
+
+function Board() {
+  return (
+    <div id="board">
+      <div>fdf</div>
     </div>
   )
 }

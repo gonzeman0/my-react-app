@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Arcade';
+  src: url(./assets/fonts/SixtyfourConvergence-Regular.ttf);
+  font-weight: 400;
+  font-size: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.glow {
+  box-shadow: 0 0 5rem 2.5rem rgba(58, 24, 80, 0.9);
+  background-color: rgba(58, 24, 80, 0.8);
+}
+
+#App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background: rgb(18, 19, 61);
+}
+
+#title {
+  font-family: 'Arcade';
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
